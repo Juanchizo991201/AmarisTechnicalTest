@@ -20,9 +20,6 @@ import static org.mockito.Mockito.when;
 class EmployeeServiceTest {
 
     @Mock
-    private RestTemplate restTemplate;
-
-    @Mock
     private EmployeeRepository employeeRepository;
 
     @InjectMocks
