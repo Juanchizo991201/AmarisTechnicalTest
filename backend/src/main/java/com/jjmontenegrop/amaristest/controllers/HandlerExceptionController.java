@@ -18,4 +18,9 @@ public class HandlerExceptionController {
     public ResponseEntity<String> handleGeneralException(Exception ex) {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred.");
     }
+
+    @ExceptionHandler(NumberFormatException.class)
+    public ResponseEntity<String> handleNumberFormatException(NumberFormatException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid id");
+    }
 }
