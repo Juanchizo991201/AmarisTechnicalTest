@@ -1,0 +1,14 @@
+.employeeSearchContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.error {
+  border: 1px solid red;
+}
