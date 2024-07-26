@@ -1,17 +1,17 @@
 package com.jjmontenegrop.amaristest.controllers;
 
-import com.jjmontenegrop.amaristest.exceptions.TooManyRequestsException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.client.HttpClientErrorException;
 
 @RestControllerAdvice
 public class HandlerExceptionController {
 
-    @ExceptionHandler(TooManyRequestsException.class)
-    public ResponseEntity<String> handleTooManyRequests(TooManyRequestsException ex) {
-        return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).body(ex.getMessage());
+    @ExceptionHandler(HttpClientErrorException.TooManyRequests.class)
+    public ResponseEntity<String> handleTooManyRequests(HttpClientErrorException.TooManyRequests ex) {
+        return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).body("Too many requests, try again later");
     }
 
     @ExceptionHandler(Exception.class)

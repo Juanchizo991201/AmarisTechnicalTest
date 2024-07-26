@@ -1,6 +1,5 @@
 package com.jjmontenegrop.amaristest.controllers;
 
-import com.jjmontenegrop.amaristest.exceptions.TooManyRequestsException;
 import com.jjmontenegrop.amaristest.models.Employee;
 import com.jjmontenegrop.amaristest.services.EmployeeServiceImpl;
 import lombok.RequiredArgsConstructor;
