@@ -27,9 +27,9 @@ public class EmployeeController {
     public ResponseEntity<?> getEmployeeById(@PathVariable String id) {
         int employeeId = Integer.parseInt(id);
         Employee employee = employeeService.getEmployeeById(employeeId);
-        if (employee != null) {
-            return ResponseEntity.status(HttpStatus.OK).body(employee);
+        if (employee == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Employee not found");
         }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Employee not found");
+        return ResponseEntity.status(HttpStatus.OK).body(employee);
     }
 }
