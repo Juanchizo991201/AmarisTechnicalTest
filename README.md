@@ -21,7 +21,7 @@ Sigue estas instrucciones para configurar y ejecutar el proyecto en tu máquina 
 
 ```bash
 git clone https://github.com/Juanchizo991201/AmarisTechnicalTest.git
-cd tu-AmarisTechnicalTest
+cd AmarisTechnicalTest
 ```
 
 ### Build and execute
