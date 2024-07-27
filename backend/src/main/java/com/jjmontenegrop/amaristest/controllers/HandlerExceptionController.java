@@ -10,17 +10,17 @@ import org.springframework.web.client.HttpClientErrorException;
 public class HandlerExceptionController {
 
     @ExceptionHandler(HttpClientErrorException.TooManyRequests.class)
-    public ResponseEntity<String> handleTooManyRequests(HttpClientErrorException.TooManyRequests ex) {
+    public ResponseEntity<String> handleTooManyRequests() {
         return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).body("Too many requests, try again later");
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> handleGeneralException(Exception ex) {
+    public ResponseEntity<String> handleGeneralException() {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An unexpected error occurred.");
     }
 
     @ExceptionHandler(NumberFormatException.class)
-    public ResponseEntity<String> handleNumberFormatException(NumberFormatException ex) {
+    public ResponseEntity<String> handleNumberFormatException() {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid id");
     }
 }
