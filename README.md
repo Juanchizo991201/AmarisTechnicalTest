@@ -127,6 +127,7 @@ java -jar build/libs/AmarisTest-1.0.war
 
 ```bash
 cd frontend
+npm install
 npm run build
 ```
 
