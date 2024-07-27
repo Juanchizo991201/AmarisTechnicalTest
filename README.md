@@ -10,8 +10,8 @@ Make sure you have installed on your system:
 
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/install/)
-- [Java JDK](https://www.oracle.com/co/java/technologies/downloads/#java17) (para el backend)
-- [Node.js y npm](https://nodejs.org/en/) (para el frontend)
+- [Java JDK](https://www.oracle.com/co/java/technologies/downloads/#java17) (for backend)
+- [Node.js y npm](https://nodejs.org/en/) (for frontend)
 
 ## Starting
 
