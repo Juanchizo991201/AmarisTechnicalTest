@@ -36,7 +36,7 @@ docker compose up --build
 
 Once the project is running, you can access it at: [http://localhost:80](http://localhost:80/)
 
-### Projrct structure
+### Project structure
 
 The project is divided into frontend and backend components. Both are configured for Docker containerization.
 
